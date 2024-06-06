@@ -28,23 +28,23 @@
         // var_dump($countries);
         // echo '</pre>';
     // *Describe yourself using an associative array: $me. Specify your age, your favourite season of the year, wether you like soccer or not (boolean). Try to use the right variable type for each value.
-        $me =[
-            'firstname' => 'Dzheylyan',
-            'lastname' => 'Canak',
-            'age' => 35,
-            'season' => 'spring',
-            'soccer' => true,
-            "favorite_mouvies" => ["Fast and Furious", "Harry Potter", "The blind side", "Taxi", "Last Vegas"],
-            "hobies" => ["read", "listen to music", "puzzles", "cooking"],
-            "mother" => [
-                'firstname' => 'Leyla',
-                'age' => 56,
-                'season' => 'spring',
-                'soccer' => false,
-                "favorite_mouvies" => ["Fast and Furious", "The blind side", "Taxi", "Last Vegas", "Maman, j'ai raté l'avion"],
-                "hobies" => [ "listen to music", "puzzles", 'cooking']
-            ]
-        ];
+        // $me =[
+        //     'firstname' => 'Dzheylyan',
+        //     'lastname' => 'Canak',
+        //     'age' => 35,
+        //     'season' => 'spring',
+        //     'soccer' => true,
+        //     "favorite_mouvies" => ["Fast and Furious", "Harry Potter", "The blind side", "Taxi", "Last Vegas"],
+        //     "hobies" => ["read", "listen to music", "puzzles", "cooking", "draw"],
+        //     "mother" => [
+        //         'firstname' => 'Leyla',
+        //         'age' => 56,
+        //         'season' => 'spring',
+        //         'soccer' => false,
+        //         "favorite_mouvies" => ["Fast and Furious", "The blind side", "Taxi", "Last Vegas", "Maman, j'ai raté l'avion"],
+        //         "hobies" => [ "listen to music", "puzzles", 'cooking']
+        //     ]
+        // ];
         // echo '<pre>';
         // print_r($me);
         // echo '</pre>';
@@ -71,24 +71,45 @@
         // echo '<pre>';
         // print_r($me);
         // echo '</pre>';
-        $soulmate =[
-            'firstname' => 'Okan',
-            'lastname' => 'Canak',
-            'age' => 40,
-            'season' => 'spring',
-            'soccer' => true,
-            "favorite_mouvies" => ["Fast and Furious", "The blind side", "Taxi", "Last Vegas"],
-            "hobies" => [ "listen to music", "puzzles", "cooking", "draw", "running"]
+        // $soulmate =[
+        //     'firstname' => 'Okan',
+        //     'lastname' => 'Canak',
+        //     'age' => 40,
+        //     'season' => 'spring',
+        //     'soccer' => true,
+        //     "favorite_mouvies" => ["Fast and Furious", "The blind side", "Taxi", "Last Vegas"],
+        //     "hobies" => [ "listen to music", "puzzles", "cooking", "draw", "running"]
+        // ];
+        // $possible_hobbies_via_intersection = array_intersect($me['hobies'], $soulmate['hobies']);
+        // echo '<pre>';
+        // print_r($possible_hobbies_via_intersection);
+        // echo '</pre>';
+        // $possible_hobbies_via_merge = array_merge($me['hobies'], $soulmate['hobies']);
+        // echo '<pre>';
+        // print_r($possible_hobbies_via_merge);
+        // echo '</pre>';
+        // * Create an array  $web_development containing a 'frontend' and a 'backend' key. Assign an empty array to each key.
+        $web_development = [
+            "frontend" => [],
+            "backend" => []
         ];
-        $possible_hobbies_via_intersection = array_intersect($me['hobies'], $soulmate['hobies']);
+        // * add xhtml
+        $web_development["frontend"] = ['xhtml'];
+        // * add Ruby on Rails
+        $web_development["backend"] = ['Ruby on Rails'];
+        // * add CSS
+        array_push($web_development['frontend'], "CSS");
+        // * add Flash
+        array_push($web_development['backend'], "Flash");
+        // * add JavaScript
+        array_push($web_development['frontend'], "JavaScript");
+        // * replace xhtml by html
+        $web_development['frontend'][0] = "html";
+        // * remove Flash
+        array_splice($web_development['backend'], 1);
         echo '<pre>';
-        print_r($possible_hobbies_via_intersection);
+        print_r($web_development);
         echo '</pre>';
-        $possible_hobbies_via_merge = array_merge($me['hobies'], $soulmate['hobies']);
-        echo '<pre>';
-        print_r($possible_hobbies_via_merge);
-        echo '</pre>';
-        // array_combine
     ?>
 </body>
 </html>
