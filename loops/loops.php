@@ -46,15 +46,12 @@
     // * Create an array containing the firstname of everyone in your startup. Display each firstname using a loop.
     $persons = ["Houda", "Zouzana", "Beni"];
     foreach($persons as $person){
-        echo $person . "<br>";
+        echo  $person . "<br>";
     }
 
     // * Create an array containing at least 10 countries. Then, generate the html that will render a select box inside an html form.
     // $countries = [ "Argentina", "Belgium", "Bulgaria" , "Germany", "Italy", "Japan", "Portugal",  "Spain", "Türkiye", "United Kingdom"];
     $countriesISO = ['AR' => 'Argentina' , 'BE' => 'Belgium', 'BG' => 'Bulgaria', 'DE' => 'Germany', 'IT' => 'Italy', 'JP' => 'Jaman' ,'PT' => 'Portugal', 'ES' => 'Spain', 'TR' => 'Türkiye', 'GB' => 'United Kingdom'];
-    foreach($countriesISO as $key => $value){
-        echo $countriesISO[$key] . "<br>";
-    }
     ?>
     <!-- <div>
         <label for="countries">Choose a country:</label>
